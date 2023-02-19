@@ -185,6 +185,8 @@ function delivery_route_optimization(buildingList = {},selectedBuilding){
    let path = [selectedBuilding]
    let prePathValue = []
    console.log(mainTable)
+
+   
     while(1){
         
         extractedValue = valueExtraction(routTable,buildingList[buildingKeys[0]])
@@ -219,13 +221,17 @@ function delivery_route_optimization(buildingList = {},selectedBuilding){
     console.log(result)
 }
 
+
+
+// inuput list of buildinng 
 let BuildingList = {
-    'A' : {'C' : 5, 'B' : 10},
-    'B': {'D' : 1},
-    'C' : {'B' : 3,'D' : 9,'E' : 2},
-    'D' : { },
-    'E': { 'D': 6}
+    A : {C : 5, B : 10},
+    B:  {D: 1},
+    C : {B : 3, D : 9,E : 2},
+    D : { },
+    E:  { D: 6}
 }
 
+// callback for the main function
 delivery_route_optimization(BuildingList,'A')
 
